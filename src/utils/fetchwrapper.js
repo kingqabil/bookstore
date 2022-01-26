@@ -3,7 +3,6 @@ export default class FetchWrapper {
     this.baseURL = baseURL;
   }
 
-
   async get(endpoint) {
     const response = await fetch(this.baseURL + endpoint);
     return response.json();
@@ -19,7 +18,6 @@ export default class FetchWrapper {
     });
     return response;
   }
-
 
   async delete(endpoint) {
     const response = await fetch(this.baseURL + endpoint, {
