@@ -14,7 +14,7 @@ export const removeBook = (payload) => ({
   payload,
 });
 
-export const displayBooks = (payload) => ({
+export const bookDisplay = (payload) => ({
   type: BOOKS_DISPLAYED,
   payload,
 });
@@ -27,6 +27,8 @@ const booksReducer = (state = initialState, { type, payload }) => {
       return [...state, payload];
     case BOOK_REMOVED:
       return (state.filter(({ id }) => id !== payload.id));
+      case BOOKS_DISPLAYED:
+        return [...state, ...payload];
     default:
       return state;
   }
@@ -43,6 +45,21 @@ export const addBookAPI = (item) => (dispatch) => {
   };
   BooksAPI.postBook(book);
   dispatch(addBook(item));
+};
+
+export const displayBooks = () => async (dispatch) => {
+  const data = await BooksAPI.getAllBooks();
+  const books = Object.entries(data).map(([id, book]) => {
+    const { category, title: fullTitle } = book[0];
+    const [title, author] = fullTitle.split(',');
+    return {
+      id,
+      title,
+      author,
+      category,
+    };
+  });
+  dispatch(bookDisplay(books));
 };
 
 export default booksReducer;
