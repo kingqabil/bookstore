@@ -1,3 +1,5 @@
+import BooksAPI from '../../utils/booksAPI';
+
 const BOOK_ADDED = 'bookStore/books/BOOK_ADDED';
 const BOOK_REMOVED = 'bookStore/books/BOOK_REMOVED';
 const BOOKS_DISPLAYED = 'bookStore/books/BOOKS_DISPLAYED';
@@ -28,6 +30,19 @@ const booksReducer = (state = initialState, { type, payload }) => {
     default:
       return state;
   }
+};
+
+export const addBookAPI = (item) => (dispatch) => {
+  const {
+    id, title, author, category,
+  } = item;
+  const book = {
+    item_id: id,
+    title: `${title} , ${author}`,
+    category,
+  };
+  BooksAPI.postBook(book);
+  dispatch(addBook(item));
 };
 
 export default booksReducer;
