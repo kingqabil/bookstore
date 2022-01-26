@@ -1,5 +1,6 @@
 const BOOK_ADDED = 'bookStore/books/BOOK_ADDED';
 const BOOK_REMOVED = 'bookStore/books/BOOK_REMOVED';
+const BOOKS_DISPLAYED = 'bookStore/books/BOOKS_DISPLAYED';
 
 export const addBook = (payload) => ({
   type: BOOK_ADDED,
@@ -8,6 +9,11 @@ export const addBook = (payload) => ({
 
 export const removeBook = (payload) => ({
   type: BOOK_REMOVED,
+  payload,
+});
+
+export const displayBooks = (payload) => ({
+  type: BOOKS_DISPLAYED,
   payload,
 });
 
