@@ -18,7 +18,7 @@ const SelectContainer = styled.div`
     }
 
     & {
-        width: 15%;
+        width: 13.813rem;
         border: solid 1px var(--neutral-color-1);
         border-radius: 4px;
         background-color: var(--white);
