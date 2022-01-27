@@ -1,7 +1,7 @@
 import FetchWrapper from './fetchWrapper';
 
 class BooksAPI {
-  static #API = new FetchWrapper = ('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/');
+  static #API = new FetchWrapper('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/');
 
   static #APP_ID = 'SMcuJc9UpHozVSS1bBzI';
 
@@ -16,7 +16,7 @@ class BooksAPI {
   }
 
   static async deleteBook(id) {
-    const response = await this.#API.delete(`apps/${this.APP_ID}/books/${id}`);
+    const response = await this.#API.delete(`apps/${this.#APP_ID}/books/${id}`);
     return response;
   }
 }

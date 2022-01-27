@@ -9,6 +9,7 @@ import { addBookAPI } from '../redux/books/books';
 const InputBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
   const titleInput = useRef(null);
 
   const dispatch = useDispatch();
@@ -18,6 +19,7 @@ const InputBook = () => {
       id: uuidv4(),
       title,
       author,
+      category,
     };
     const res = () => title !== '' && author !== '' && dispatch(addBookAPI(newBook));
     res();
