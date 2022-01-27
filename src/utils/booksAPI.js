@@ -1,4 +1,4 @@
-import FetchWrapper from './fetchWrapper';
+import FetchWrapper from './fetchwrapper';
 
 /**
  * @class BooksAPI - to handle methods that interact with API
