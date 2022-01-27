@@ -1,11 +1,11 @@
 import { useState } from 'react';
+import styled, { keyframes } from 'styled-components';
 import { useDispatch } from 'react-redux';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import PropTypes from 'prop-types';
 import Button from './Button';
-import { removeBookAPI } from '../redux/books/books';
-import styled, { keyframes } from 'styled-components';
+import { removeBookAPI } from '../redux/books/thunks/bookThunks';
 
 const slideIn = keyframes`
 0% {

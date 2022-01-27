@@ -3,8 +3,6 @@ import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import { booksReducer, loadingReducer } from './books/reducers/books';
 
-import { booksReducer, loadingReducer } from './books/books';
-
 const reducer = combineReducers({
   booksReducer,
   loadingReducer,

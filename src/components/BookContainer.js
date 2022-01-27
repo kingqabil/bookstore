@@ -1,7 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux';
+import styled from 'styled-components';
 import { useEffect } from 'react';
 import Spinner from './Spinner';
-import { displayBooks } from '../redux/books/books';
+import { displayBooks } from '../redux/books/thunks/bookThunks';
 import Book from './Book';
 
 const Container = styled.div`
