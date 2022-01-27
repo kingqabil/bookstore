@@ -1,7 +1,7 @@
-import FetchWrapper from './fetchWrapper';
+import fetchWrapper from './fetchWrapper';
 
 class BooksAPI {
-  static #API = new FetchWrapper('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/');
+  static #API = new fetchWrapper('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/');
 
   static #APP_ID = 'SMcuJc9UpHozVSS1bBzI';
 
