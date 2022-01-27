@@ -6,9 +6,10 @@ import { displayBooks } from '../redux/books/thunks/bookThunks';
 import Book from './Book';
 
 const Container = styled.div`
-display: grid;
-grid-template-columns: 1fr;
-gap: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px 0;
+  margin-bottom: 2.9rem
 `;
 
 const BookList = () => {

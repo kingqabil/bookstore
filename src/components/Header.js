@@ -51,9 +51,12 @@ const NavContainer = styled(NavBar)`
   > nav {
 
     > .links {
-      opacity: 0.5;
+       opacity: 0.5;
       font-size: 0.813rem;
       font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
       letter-spacing: 1.9px;
       color: var(--black);
 
