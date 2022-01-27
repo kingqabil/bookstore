@@ -1,4 +1,4 @@
-import FetchWrapper from './fetchWrapper';
+import FetchWrapper from './utils/fetchWrapper';
 
 class BooksAPI {
   static #API = new FetchWrapper('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/');
