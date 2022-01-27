@@ -1,11 +1,9 @@
 import * as Actions from '../actions/booksAction';
 
-// declare the initial state
 const initialState = { books: [] };
 
 const initialLoading = { loading: false };
 
-// the reducer function for the books
 export const booksReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case Actions.BOOK_ADDED:
@@ -19,7 +17,6 @@ export const booksReducer = (state = initialState, { type, payload }) => {
   }
 };
 
-// the reducer function for the loaders
 export const loadingReducer = (state = initialLoading, { type, payload }) => {
   switch (type) {
     case Actions.LOADING_STARTED:

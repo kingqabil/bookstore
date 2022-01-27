@@ -1,7 +1,6 @@
 import BooksAPI from '../../../utils/booksAPI';
 import * as Actions from '../actions/booksAction';
 
-// the addBook to the API thunk middleware
 export const addBookAPI = (item) => (dispatch) => {
   const {
     id, title, author, category,
@@ -15,7 +14,6 @@ export const addBookAPI = (item) => (dispatch) => {
   dispatch(Actions.addBook(item));
 };
 
-// the displayBooks from the API thunk middleware
 export const displayBooks = () => async (dispatch) => {
   try {
     dispatch(Actions.loadingStart(true));
@@ -38,7 +36,6 @@ export const displayBooks = () => async (dispatch) => {
   }
 };
 
-// the removeBookAPI from the API thunk middleware
 export const removeBookAPI = (id) => (dispatch) => {
   BooksAPI.deleteBook(id);
   dispatch(Actions.removeBook({ id }));

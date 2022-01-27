@@ -11,6 +11,7 @@ const Container = styled.section`
   display: flex;
   flex-direction: column;
   margin-top: 2.9rem;
+
   > div:first-of-type {
     > h2 {
       font-size: 1.17rem;
@@ -28,11 +29,11 @@ const Container = styled.section`
     justify-content: space-between;
 
     > input {
-      width: 19rem;
+      width: 30%;
       height: 2.813rem;
       border: solid 1px #e8e8e8;
       padding: 0 20px;
-      font-size: 1rem;
+      font-size: 1rem; 
       font-family: var(--font-1);
 
       &::placeholder {

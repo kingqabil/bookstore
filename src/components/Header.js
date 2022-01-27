@@ -7,7 +7,7 @@ const NavBar = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 1.813rem 6.25rem;
-  background: var(--white);
+  background: var(--white); 
 
   > div {
     &:last-child {
@@ -51,12 +51,9 @@ const NavContainer = styled(NavBar)`
   > nav {
 
     > .links {
-       opacity: 0.5;
+      opacity: 0.5;
       font-size: 0.813rem;
       font-weight: normal;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
       letter-spacing: 1.9px;
       color: var(--black);
 

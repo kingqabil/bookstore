@@ -1,15 +1,16 @@
 import { useSelector, useDispatch } from 'react-redux';
-import styled from 'styled-components';
 import { useEffect } from 'react';
-import Spinner from './Spinner';
+import styled from 'styled-components';
+
 import { displayBooks } from '../redux/books/thunks/bookThunks';
 import Book from './Book';
+import Spinner from './Spinner';
 
 const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px 0;
-  margin-bottom: 2.9rem
+  margin-bottom: 2.9rem;
 `;
 
 const BookList = () => {

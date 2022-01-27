@@ -18,7 +18,7 @@ const SelectContainer = styled.div`
     }
 
     & {
-        width: 13.813rem;
+        width: 15%;
         border: solid 1px var(--neutral-color-1);
         border-radius: 4px;
         background-color: var(--white);
@@ -67,6 +67,14 @@ const Select = ({ selectValue, handleChange }) => {
     {
       id: 5,
       val: 'Comedy',
+    },
+    {
+      id: 6,
+      val: 'Romance',
+    },
+    {
+      id: 7,
+      val: 'True Story',
     },
   ];
   return (
