@@ -6,7 +6,7 @@
 
 <br/>
 <img src="image.jpg">
-# Mini Demo
+# [Live Demo](https://beautiful-paprenjak-8accd9.netlify.app/)
 
 ![](./src/images/bookstore.gif)
 
